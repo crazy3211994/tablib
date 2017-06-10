@@ -1,5 +1,5 @@
 [Ivy]
-[>Created: Sat Jun 10 15:04:45 ICT 2017]
+[>Created: Sat Jun 10 15:21:47 ICT 2017]
 15C3B1488FF4B314 3.18 #module
 >Proto >Proto Collection #zClass
 ms0 myTabProcess Big #zClass
@@ -21,9 +21,9 @@ ms0 @PushWFArc f2 '' #zField
 ms0 @RichDialogProcessStart f3 '' #zField
 ms0 @RichDialogEnd f4 '' #zField
 ms0 @GridStep f6 '' #zField
-ms0 @DBStep f7 '' #zField
 ms0 @PushWFArc f8 '' #zField
-ms0 @PushWFArc f5 '' #zField
+ms0 @Split f5 '' #zField
+ms0 @PushWFArc f7 '' #zField
 ms0 @PushWFArc f9 '' #zField
 >Proto ms0 ms0 myTabProcess #zField
 ms0 f0 guid 15C3B148A9923799 #txt
@@ -89,36 +89,21 @@ ms0 f6 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 ' #txt
 ms0 f6 264 202 112 44 -24 -8 #rect
 ms0 f6 @|StepIcon #fIcon
-ms0 f7 actionDecl 'com.hcmut.myTab.myTabData out;
-' #txt
-ms0 f7 actionTable 'out=in;
-' #txt
-ms0 f7 dbSql '<?xml version=""1.0"" standalone=""no""?>
-<!DOCTYPE ANY_SQL SYSTEM  ""sqlStatements.dtd"">
-<ANY_SQL><Verbatim quote=''true''></Verbatim></ANY_SQL>' #txt
-ms0 f7 cache '{/cache false /invalidation false /scope 0 /groupname ""/lifetime_group "0"/invalidation_time_group ""/identifier ""/lifetime_entry "0"/invalidation_time_entry ""}' #txt
-ms0 f7 lotSize 2147483647 #txt
-ms0 f7 startIdx 0 #txt
-ms0 f7 type com.hcmut.myTab.myTabData #txt
-ms0 f7 @C|.xml '<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<elementInfo>
-    <language>
-        <name>dadada</name>
-        <nameStyle>6
-</nameStyle>
-    </language>
-</elementInfo>
-' #txt
-ms0 f7 536 234 112 44 -21 -8 #rect
-ms0 f7 @|DBStepIcon #fIcon
 ms0 f8 expr out #txt
 ms0 f8 108 163 264 224 #arcP
-ms0 f5 expr out #txt
-ms0 f5 376 224 536 256 #arcP
-ms0 f9 expr out #txt
-ms0 f9 592 234 237 160 #arcP
-ms0 f9 1 592 160 #addKink
-ms0 f9 1 0.3957746478873239 0 0 #arcLabel
+ms0 f5 actionDecl 'com.hcmut.myTab.myTabData out1;
+' #txt
+ms0 f5 actionTable 'out1=in;
+' #txt
+ms0 f5 type com.hcmut.myTab.myTabData #txt
+ms0 f5 432 208 32 32 0 16 #rect
+ms0 f5 @|ThreadIcon #fIcon
+ms0 f7 expr out #txt
+ms0 f7 376 224 432 224 #arcP
+ms0 f9 expr out1 #txt
+ms0 f9 448 208 237 160 #arcP
+ms0 f9 1 448 160 #addKink
+ms0 f9 1 0.3862559241706161 0 0 #arcLabel
 >Proto ms0 .type com.hcmut.myTab.myTabData #txt
 >Proto ms0 .processKind HTML_DIALOG #txt
 >Proto ms0 -8 -8 16 16 16 26 #rect
@@ -127,7 +112,7 @@ ms0 f0 mainOut f2 tail #connect
 ms0 f2 head f1 mainIn #connect
 ms0 f3 mainOut f8 tail #connect
 ms0 f8 head f6 mainIn #connect
-ms0 f6 mainOut f5 tail #connect
-ms0 f5 head f7 mainIn #connect
-ms0 f7 mainOut f9 tail #connect
+ms0 f6 mainOut f7 tail #connect
+ms0 f7 head f5 in #connect
+ms0 f5 out f9 tail #connect
 ms0 f9 head f4 mainIn #connect

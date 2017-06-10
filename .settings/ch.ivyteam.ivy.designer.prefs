@@ -1,0 +1,4 @@
+ch.ivyteam.ivy.designer.preferences.DataClassPreferencePage\:DEFAULT_DATA_CLASS=com.hcmu.tablib.Data
+ch.ivyteam.ivy.designer.preferences.DataClassPreferencePage\:DEFAULT_NAMESPACE=com.hcmu.tablib
+ch.ivyteam.ivy.project.preferences\:PROJECT_VERSION=61909
+eclipse.preferences.version=1

@@ -1,0 +1,4 @@
+myTabData #class
+com.hcmut.myTab #namespace
+mainData com.hcmu.tablib.mainData #field
+mainData PERSISTENT #fieldModifier
